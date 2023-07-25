@@ -1,0 +1,16 @@
+steps:
+- name: Build the Docker image
+  id: build
+  action: gcr.io/cloud-builders/docker
+  args:
+    - build
+    - '-t'
+    - gcr.io/private-pool-393811/my-image:latest
+    - .
+
+- name: Push the Docker image
+  id: push
+  action: gcr.io/cloud-builders/docker
+  args:
+    - push
+    - gcr.io/private-pool-393811/my-image:latest
