@@ -1,3 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/private-pool-393811/art', '.' ]
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/private-pool-393811/art/clam', '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'us-central1-docker.pkg.dev/private-pool-393811/art/clam']
